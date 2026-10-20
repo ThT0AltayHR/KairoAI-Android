@@ -32,6 +32,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.app.NotificationCompat
 import androidx.core.app.ServiceCompat
+import androidx.core.content.ContextCompat
 import com.altayhr.kairo.MainActivity
 import com.altayhr.kairo.R
 import com.altayhr.kairo.data.SecureApiKeyStore
@@ -112,8 +113,7 @@ class IslandOverlayService : Service() {
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
         createChannel()
         val filter = IntentFilter().apply { addAction(ACTION_UPDATE); addAction(ACTION_REPOSITION) }
-        if (Build.VERSION.SDK_INT >= 33) registerReceiver(updateReceiver, filter, RECEIVER_NOT_EXPORTED)
-        else @Suppress("DEPRECATION") registerReceiver(updateReceiver, filter)
+        ContextCompat.registerReceiver(this, updateReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
