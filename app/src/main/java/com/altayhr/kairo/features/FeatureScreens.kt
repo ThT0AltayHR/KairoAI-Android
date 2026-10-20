@@ -580,4 +580,5 @@ private object IntegrationTester {
     }
 }
 
+@Composable
 private fun fieldColors() = OutlinedTextFieldDefaults.colors(focusedBorderColor = CAccent, unfocusedBorderColor = CStroke, focusedTextColor = CText, unfocusedTextColor = CText, focusedLabelColor = CAccent, unfocusedLabelColor = CSecondary, cursorColor = CAccent)

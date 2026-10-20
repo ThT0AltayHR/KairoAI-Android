@@ -498,8 +498,7 @@ private fun KairoApp(store: WorkspaceStore, secrets: SecureApiKeyStore) {
             addAction(MainActivity.ACTION_CAPSULE_NAVIGATE)
             addAction(IslandOverlayService.ACTION_REPOSITION)
         }
-        if (android.os.Build.VERSION.SDK_INT >= 33) context.registerReceiver(taskReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
-        else @Suppress("DEPRECATION") context.registerReceiver(taskReceiver, filter)
+        ContextCompat.registerReceiver(context, taskReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED)
         onDispose { runCatching { context.unregisterReceiver(taskReceiver) } }
     }
 

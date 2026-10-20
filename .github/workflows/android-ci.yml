@@ -40,11 +40,14 @@ jobs:
         run: python3 scripts/verify_widget_catalog.py
       - name: Run unit tests, Android lint and debug build
         run: gradle --no-daemon clean testDebugUnitTest lint assembleDebug
-      - name: Upload debug APK for diagnostics
+      - name: Prepare app-name APK artifact
         if: always() && hashFiles('app/build/outputs/apk/debug/*.apk') != ''
+        run: cp app/build/outputs/apk/debug/app-debug.apk "KairoAI-debug-${{ github.run_number }}.apk"
+      - name: Upload debug APK for diagnostics
+        if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: kairo-ai-debug-${{ github.run_number }}
-          path: app/build/outputs/apk/debug/*.apk
+          name: KairoAI-debug-${{ github.run_number }}
+          path: KairoAI-debug-${{ github.run_number }}.apk
           if-no-files-found: ignore
           retention-days: 7
