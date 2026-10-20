@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agent_widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="13dp"
+    android:background="@drawable/widget_agent_background">
+
+    <TextView
+        android:id="@+id/agent_widget_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KAIRO AI  /  LIVE"
+        android:textColor="#AA9BFF"
+        android:textSize="9sp"
+        android:letterSpacing="0.12"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/agent_widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Kairo widget"
+        android:textColor="#F4F5F7"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/agent_widget_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="AI görevi bekliyor"
+        android:textColor="#66D6C0"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/agent_widget_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:gravity="top"
+        android:text="Görev durumu burada görünür."
+        android:textColor="#A3A9B8"
+        android:textSize="10sp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/agent_widget_open"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.72"
+            android:gravity="center"
+            android:background="@drawable/widget_action_background"
+            android:text="AÇ"
+            android:textColor="#E9E8F3"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/agent_widget_ai"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.45"
+            android:layout_marginStart="7dp"
+            android:gravity="center"
+            android:background="@drawable/widget_agent_action_background"
+            android:text="AI İLE BAŞLAT  ↗"
+            android:textColor="#090A10"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

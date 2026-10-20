@@ -1,0 +1,16 @@
+<resources>
+    <style name="Theme.Kairo" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#A78BFF</item>
+        <item name="android:statusBarColor">#090A0C</item>
+        <item name="android:navigationBarColor">#090A0C</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#090A10</item>
+    </style>
+    <style name="Theme.Kairo.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#090A10</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_transparent</item>
+        <item name="postSplashScreenTheme">@style/Theme.Kairo</item>
+    </style>
+</resources>

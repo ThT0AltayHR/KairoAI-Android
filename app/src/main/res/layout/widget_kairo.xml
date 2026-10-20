@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/widget_background">
+
+    <LinearLayout
+        android:id="@+id/widget_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:id="@+id/widget_mochi"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="Kairo simgesi"
+            android:src="@drawable/ic_mochi" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="9dp">
+            <TextView
+                android:id="@+id/widget_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kairo AI"
+                android:textColor="#F4F5F7"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/widget_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Hazır"
+                android:textColor="#AA9BFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="3dp">
+        <ImageView
+            android:id="@+id/widget_album_cover"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="9dp"
+            android:contentDescription="Spotify albüm kapağı"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_spotify_mark" />
+        <TextView
+            android:id="@+id/widget_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:minHeight="35dp"
+            android:gravity="center_vertical"
+            android:text="Yeni bir görev başlat"
+            android:textColor="#A3A9B8"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="3dp">
+        <TextView android:id="@+id/widget_spotify_prev" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center" android:text="|◀" android:textColor="#F4F5F7" android:textSize="12sp" />
+        <TextView android:id="@+id/widget_spotify_toggle" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center" android:text="▶ / Ⅱ" android:textColor="#1ED760" android:textSize="12sp" android:textStyle="bold" />
+        <TextView android:id="@+id/widget_spotify_next" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center" android:text="▶|" android:textColor="#F4F5F7" android:textSize="12sp" />
+        <TextView android:id="@+id/widget_spotify_shuffle" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center" android:text="Karıştır" android:textColor="#A3A9B8" android:textSize="9sp" />
+        <TextView android:id="@+id/widget_spotify_repeat" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="1" android:gravity="center" android:text="Tekrar" android:textColor="#A3A9B8" android:textSize="9sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="6dp">
+        <TextView
+            android:id="@+id/widget_chat"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/widget_action_background"
+            android:gravity="center"
+            android:text="Sohbet"
+            android:textColor="#F4F5F7"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/widget_agent"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/widget_action_background"
+            android:gravity="center"
+            android:text="Görev merkezi"
+            android:textColor="#F4F5F7"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/widget_voice"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_action_background"
+            android:gravity="center"
+            android:text="Sesli sohbet"
+            android:textColor="#F4F5F7"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end|center_vertical"
+        android:paddingTop="4dp">
+        <TextView
+            android:id="@+id/widget_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Akıllı araçlar"
+            android:textColor="#AA9BFF"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/widget_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            android:text="Ayarlar"
+            android:textColor="#AA9BFF"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

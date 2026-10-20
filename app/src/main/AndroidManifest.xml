@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <application android:allowBackup="false" android:label="Kairo AI" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:usesCleartextTraffic="false" android:supportsRtl="true" android:theme="@style/Theme.Kairo.Starting">
+        <activity android:name="com.altayhr.kairo.MainActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="unspecified">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="com.altayhr.kairo" android:path="/oauth2redirect" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.altayhr.kairo.service.IslandOverlayService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-enabled live activity capsule showing ongoing assistant tasks and voice session status." />
+        </service>
+        <service android:name="com.altayhr.kairo.service.GeminiLiveVoiceService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="microphone" />
+        <service android:name="com.altayhr.kairo.service.GeminiTaskService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="dataSync" />
+        <receiver android:name="com.altayhr.kairo.widgets.KairoWidgetProvider" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+                <action android:name="com.altayhr.kairo.widget.SPOTIFY_PREV" />
+                <action android:name="com.altayhr.kairo.widget.SPOTIFY_TOGGLE" />
+                <action android:name="com.altayhr.kairo.widget.SPOTIFY_NEXT" />
+                <action android:name="com.altayhr.kairo.widget.SPOTIFY_SHUFFLE" />
+                <action android:name="com.altayhr.kairo.widget.SPOTIFY_REPEAT" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_info" />
+        </receiver>
+
+        <!-- Separate launcher entries for the Kairo AI-connected widget collection. -->
+        <receiver android:name="com.altayhr.kairo.widgets.CommandFlowWidgetProvider" android:exported="true" android:label="@string/kairo_widget_commands_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_commands" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.ProjectProgressWidgetProvider" android:exported="true" android:label="@string/kairo_widget_progress_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_progress" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.AgentFleetWidgetProvider" android:exported="true" android:label="@string/kairo_widget_agents_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_agents" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.GradleBuildWidgetProvider" android:exported="true" android:label="@string/kairo_widget_build_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_build" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.NpmWorkflowWidgetProvider" android:exported="true" android:label="@string/kairo_widget_npm_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_npm" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.GithubReleaseWidgetProvider" android:exported="true" android:label="@string/kairo_widget_release_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_release" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.ExpoBuildWidgetProvider" android:exported="true" android:label="@string/kairo_widget_expo_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_expo" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.DownloadTrackerWidgetProvider" android:exported="true" android:label="@string/kairo_widget_download_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_download" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.FileAuditWidgetProvider" android:exported="true" android:label="@string/kairo_widget_files_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_files" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.DebugAssistantWidgetProvider" android:exported="true" android:label="@string/kairo_widget_debug_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_debug" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.TestLabWidgetProvider" android:exported="true" android:label="@string/kairo_widget_tests_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_tests" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.SecurityWatchWidgetProvider" android:exported="true" android:label="@string/kairo_widget_security_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_security" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.CodeReviewWidgetProvider" android:exported="true" android:label="@string/kairo_widget_review_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_review" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.IntegrationStatusWidgetProvider" android:exported="true" android:label="@string/kairo_widget_integrations_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_integrations" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.SpotifyStatusWidgetProvider" android:exported="true" android:label="@string/kairo_widget_spotify_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_spotify" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.NetworkStatusWidgetProvider" android:exported="true" android:label="@string/kairo_widget_network_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_network" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.ContextWindowWidgetProvider" android:exported="true" android:label="@string/kairo_widget_context_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_context" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.PromptWorkshopWidgetProvider" android:exported="true" android:label="@string/kairo_widget_prompt_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_prompt" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.ApprovalQueueWidgetProvider" android:exported="true" android:label="@string/kairo_widget_approvals_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_approvals" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.DeliveryCardsWidgetProvider" android:exported="true" android:label="@string/kairo_widget_delivery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_delivery" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.ActivityLogWidgetProvider" android:exported="true" android:label="@string/kairo_widget_activity_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_activity" />
+        </receiver>
+        <receiver android:name="com.altayhr.kairo.widgets.ProjectIntegrityWidgetProvider" android:exported="true" android:label="@string/kairo_widget_filesync_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.altayhr.kairo.widget.REFRESH" />
+                <action android:name="com.altayhr.kairo.island.UPDATE" />
+                <action android:name="com.altayhr.kairo.island.REPOSITION" />
+                <action android:name="com.altayhr.kairo.task.UPDATE" />
+                <action android:name="com.altayhr.kairo.spotify.UPDATE" />
+                <action android:name="com.altayhr.kairo.network.STATUS" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kairo_widget_filesync" />
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,8 @@
+Kairo AI 1.0.2 — Source release
+
+Application ID: com.altayhr.kairo (unchanged)
+Package contents: Android/Kotlin source, embedded Terminal Emulator + TerminalView libraries, AI terminal approval/PTY integration, 22 separate AI launcher widgets with shared task-status integration, Android CI and signed Release workflows, source/docs/licenses.
+
+This is a source ZIP, not an APK. A full Android Gradle build, signing, and physical-device test could not be performed in the preparation environment because Android SDK/Gradle were unavailable. See docs/FINAL_QA_REPORT_TR.md.
+
+Embedded shell: /system/bin/sh, operating under Kairo's normal Android application UID. This is not an OS/container sandbox. Commands suggested by AI must be explicitly approved. The Termux Linux userland/package manager and Node/npm/Git/Gradle/JDK/Expo binaries are not included in the uploaded source archive.

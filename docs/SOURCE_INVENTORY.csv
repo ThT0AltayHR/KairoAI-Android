@@ -1,0 +1,188 @@
+Kaynak Swift dosyası,Bayt,İşlev grubu,Android port durumu
+Sources/App/AppDelegate.swift,13344,Harici servis / macOS sistem entegrasyonu,Port edilmedi: macOS/AppKit/AppleScript/cihaz bağlamı; Android platform tasarımı gerekir
+Sources/App/AppLog.swift,3850,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/AppState.swift,39587,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/ApprovalQueue.swift,3532,Terminal / ajan hook / onay akışı,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/AskQuestion.swift,3997,Diğer uygulama mantığı / UI,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/BotCanvasView.swift,16052,Dinamik ada / durum / animasyon,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/CalcomPoller.swift,4790,Harici servis / macOS sistem entegrasyonu,Kısmi: Cal.com v2 yaklaşan rezervasyonlara salt okunur temel GET özeti; poller/olay/webhook/yazma akışları taşınmadı
+Sources/App/CaptureCardView.swift,2354,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/ChatMarkdown.swift,4740,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/ChatMarkdownView.swift,4487,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/ClaudeHookDetection.swift,920,Terminal / ajan hook / onay akışı,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/ClaudeHost.swift,3591,Diğer uygulama mantığı / UI,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/ClaudePlanCardView.swift,6134,Diğer uygulama mantığı / UI,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/ClaudePlanGauge.swift,3022,Diğer uygulama mantığı / UI,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/ClaudeResponseText.swift,759,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/ClaudeService.swift,36021,Sohbet / ayarlar / dosya / Flow arayüzü,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/ClaudeSettingsFile.swift,6719,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/CodexPlanGauge.swift,8819,Diğer uygulama mantığı / UI,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/CryptoController.swift,13222,Harici servis / macOS sistem entegrasyonu,Kısmi: salt-okunur Coinbase spot fiyatı ve yerel miktar kaydı; bütün borsa/cüzdan özellikleri yok
+Sources/App/CryptoViews.swift,6638,Harici servis / macOS sistem entegrasyonu,Kısmi: salt-okunur Coinbase spot fiyatı ve yerel miktar kaydı; bütün borsa/cüzdan özellikleri yok
+Sources/App/DemoEngine.swift,34188,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/DesktopMochi.swift,32206,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/DesktopMochiLogic.swift,3485,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/DictationTranscript.swift,4241,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/FileDropView.swift,5022,Diğer uygulama mantığı / UI,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/FlowAudioBands.swift,3594,Ses / dikte / not tutucu,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/FlowCleanup.swift,10695,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/FlowDictation.swift,24962,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/FlowHub.swift,22040,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/FlowHubHome.swift,11961,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/FlowHubInsights.swift,7479,Sohbet / ayarlar / dosya / Flow arayüzü,Kısmi: Android sohbet/mesaj/dosya/kaynak metrikleri yerel hesaplanır; özgün analitik/telemetri eşleniği değil
+Sources/App/FlowHubMochis.swift,22011,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/FlowHubNotes.swift,29765,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/FlowHubSettings.swift,13386,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/FlowHubWords.swift,15056,Sohbet / ayarlar / dosya / Flow arayüzü,"Kısmi: FlowToolkitScreen sözlük ve eşleştirme tercihlerini yerel saklar, Gemini bağlamına güvenli talimat ekler; macOS klavye/dikte kancaları birebir değil"
+Sources/App/FlowKeyLogic.swift,4593,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/FlowLanguages.swift,5850,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/FlowPill.swift,31889,Dinamik ada / durum / animasyon,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/FlowSettingsBox.swift,3029,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/FlowStore.swift,12231,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/FlowText.swift,7454,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/GitHubActivity.swift,2855,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/GitHubPulse.swift,9824,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/GithubPoller.swift,14465,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/GreetingCanvasView.swift,27240,Dinamik ada / durum / animasyon,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/HookServer.swift,181275,Terminal / ajan hook / onay akışı,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/HotKeyCenter.swift,4984,Harici servis / macOS sistem entegrasyonu,Port edilmedi: macOS/AppKit/AppleScript/cihaz bağlamı; Android platform tasarımı gerekir
+Sources/App/IslandDisplayChoice.swift,2340,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/IslandRootView.swift,32992,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/IslandStateMachine.swift,9375,Dinamik ada / durum / animasyon,"Kısmi: overlay kapsülü, kalıcı durum bildirimi, sürükleme, ölçü/konum/opacity/auto-collapse ve temel durumlar portlandı; macOS state/animasyon/menü çubuğu eşdeğeri değil"
+Sources/App/IslandViewContent.swift,218778,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/IslandWindowController.swift,93528,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/LocalChat.swift,8846,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/MacDictation.swift,14084,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/MachineVitals.swift,10820,Harici servis / macOS sistem entegrasyonu,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/MailController.swift,16655,Harici servis / macOS sistem entegrasyonu,Kısmi: kullanıcı denetimli e-posta taslağı / temel voice ekranı; kaynak niyet/relay akışı tam değil
+Sources/App/MailViews.swift,9125,Harici servis / macOS sistem entegrasyonu,Kısmi: kullanıcı denetimli e-posta taslağı / temel voice ekranı; kaynak niyet/relay akışı tam değil
+Sources/App/MusicController.swift,13920,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/N8nPoller.swift,10917,Harici servis / macOS sistem entegrasyonu,Kısmi: kullanıcı tanımlı HTTPS n8n API URL üzerinde salt okunur workflow GET özeti; arka plan poller/trigger/yazma akışları taşınmadı
+Sources/App/NotchBuddyApp.swift,619,Dinamik ada / durum / animasyon,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/NoteAudio.swift,12493,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/NoteEcho.swift,6675,Yardımcı ekran / veri modeli / telefon köprüsü,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/NoteModels.swift,24855,Yardımcı ekran / veri modeli / telefon köprüsü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/NoteTaker.swift,33425,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/NotionPoller.swift,4290,Harici servis / macOS sistem entegrasyonu,Kısmi: Notion bağlantı kimliği için salt okunur endpoint özeti; sayfa arama/düzenleme ve özgün poller taşınmadı
+Sources/App/NowPlayingViews.swift,6546,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/ParakeetEngine.swift,10033,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/PhoneLink/ApprovalRelay.swift,7302,Terminal / ajan hook / onay akışı,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/CloudProbe.swift,11045,Terminal / ajan hook / onay akışı,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/InstructionRunner.swift,9237,Terminal / ajan hook / onay akışı,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/LiveActivityRelay.swift,18501,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/QuestionRelay.swift,5666,Terminal / ajan hook / onay akışı,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/ServiceDetailRunner.swift,48609,Terminal / ajan hook / onay akışı,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/PhoneLink/ServicePublisher.swift,19315,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/SessionPublisher.swift,11338,Terminal / ajan hook / onay akışı,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PhoneLink/TurnRecorder.swift,10009,Terminal / ajan hook / onay akışı,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PillSessionRegistry.swift,6724,Dinamik ada / durum / animasyon,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/PortfolioController.swift,52226,Harici servis / macOS sistem entegrasyonu,Kısmi: salt-okunur Coinbase spot fiyatı ve yerel miktar kaydı; bütün borsa/cüzdan özellikleri yok
+Sources/App/PortfolioSettingsView.swift,15523,Sohbet / ayarlar / dosya / Flow arayüzü,Kısmi: salt-okunur Coinbase spot fiyatı ve yerel miktar kaydı; bütün borsa/cüzdan özellikleri yok
+Sources/App/PortfolioViews.swift,7416,Harici servis / macOS sistem entegrasyonu,Kısmi: salt-okunur Coinbase spot fiyatı ve yerel miktar kaydı; bütün borsa/cüzdan özellikleri yok
+Sources/App/RecapStore.swift,11491,Harici servis / macOS sistem entegrasyonu,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/ResendPoller.swift,2687,Harici servis / macOS sistem entegrasyonu,Kısmi: Resend alan adı durumlarını salt okunur GET ile özetleme; e-posta gönderme/webhook/arka plan poller taşınmadı
+Sources/App/SafeWebURL.swift,584,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/ScreenCapture.swift,20761,Harici servis / macOS sistem entegrasyonu,Port edilmedi: macOS/AppKit/AppleScript/cihaz bağlamı; Android platform tasarımı gerekir
+Sources/App/SettingsView.swift,112977,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/ShortcutLogic.swift,12081,Harici servis / macOS sistem entegrasyonu,Port edilmedi: macOS/AppKit/AppleScript/cihaz bağlamı; Android platform tasarımı gerekir
+Sources/App/ShortcutsSettingsView.swift,6827,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/SoundEngine.swift,4494,Ses / dikte / not tutucu,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/SpotifyController.swift,20972,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/SpotifyViews.swift,10829,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/StripePoller.swift,7087,Harici servis / macOS sistem entegrasyonu,Kısmi: Stripe hesap/işletme profilini salt okunur GET ile özetleme; ödeme/işlem/olay akışı taşınmadı
+Sources/App/TerminalTarget+AppKit.swift,664,Terminal / ajan hook / onay akışı,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/TerminalTarget.swift,1218,Terminal / ajan hook / onay akışı,Bu teslimde kapsam dışı: CLI ajan/hook/Claude-odaklı akış; Android eşleniği yok
+Sources/App/UploadCanvasView.swift,25752,Sohbet / ayarlar / dosya / Flow arayüzü,Android Compose/Gemini/dosya akışlarında karşılıklar var; kaynak uygulama mantığına tam eşdeğer değil
+Sources/App/UploadSequenceEngine.swift,17805,Sohbet / ayarlar / dosya / Flow arayüzü,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/UserIdentity.swift,1438,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/VercelPoller.swift,4822,Harici servis / macOS sistem entegrasyonu,Kısmi: Vercel projelerini salt okunur GET ile listeleme; dağıtım tetikleme/log/poller akışı taşınmadı
+Sources/App/VitalsHoverLine.swift,1705,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/Voice/ClaudeVoiceBrain.swift,16690,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/ConversationContext.swift,5677,Diğer uygulama mantığı / UI,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/ElevenLabsTTS.swift,4761,Diğer uygulama mantığı / UI,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/EnergyVAD.swift,5221,Diğer uygulama mantığı / UI,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/EntityResolver.swift,6041,Diğer uygulama mantığı / UI,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/IntentParser.swift,38593,Harici servis / macOS sistem entegrasyonu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/LiveVoiceControls.swift,4247,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/SpotterGeneration.swift,1582,Diğer uygulama mantığı / UI,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/TurnEndPolicy.swift,2643,Diğer uygulama mantığı / UI,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceActionRunner.swift,34426,Ses / dikte / not tutucu,Kısmi: kullanıcı denetimli e-posta taslağı / temel voice ekranı; kaynak niyet/relay akışı tam değil
+Sources/App/Voice/VoiceAudio.swift,9656,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceBrain.swift,21830,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceCaptionManager.swift,17357,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceDataSources.swift,19290,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceEngine.swift,34534,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceGenderNames.swift,1984,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceIntent.swift,4253,Ses / dikte / not tutucu,Kısmi: kullanıcı denetimli e-posta taslağı / temel voice ekranı; kaynak niyet/relay akışı tam değil
+Sources/App/Voice/VoiceIslandView.swift,3378,Ses / dikte / not tutucu,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/App/Voice/VoiceQuery.swift,48019,Ses / dikte / not tutucu,Kısmi: kullanıcı denetimli e-posta taslağı / temel voice ekranı; kaynak niyet/relay akışı tam değil
+Sources/App/Voice/VoiceResultView.swift,1525,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceSettings.swift,5910,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceSpeaker.swift,9404,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceTranscriptHistory.swift,2446,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/VoiceWakeFilter.swift,1320,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/WakePhrase.swift,3961,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/WakeSpotter.swift,10200,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/Voice/WakeWindowBackoff.swift,2249,Ses / dikte / not tutucu,Kısmi: Gemini Live ve yerel metin notları var; yerel transkripsiyon/wake word/sesli not motoru yok
+Sources/App/WeeklyRecapView.swift,15059,Harici servis / macOS sistem entegrasyonu,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/App/WhatsAppController.swift,26968,Harici servis / macOS sistem entegrasyonu,Kısmi: WhatsApp mesaj taslağı kullanıcı onayıyla harici istemciye açılır; özgün servis poller/otomatik gönderim taşınmadı
+Sources/App/WhatsAppGOWAProcess.swift,4945,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/WhatsAppGateway.swift,21375,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/WhatsAppModels.swift,12472,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/WhatsAppProvider.swift,17469,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/WhatsAppViews.swift,29166,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/WhatsAppWebhook.swift,4188,Harici servis / macOS sistem entegrasyonu,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/App/WindowContextCapture.swift,2698,Harici servis / macOS sistem entegrasyonu,Port edilmedi: macOS/AppKit/AppleScript/cihaz bağlamı; Android platform tasarımı gerekir
+Sources/CoucouKit/BotEngine.swift,79741,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/CoucouKit/ColorHex.swift,1354,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/CoucouKit/DiffEngine.swift,12138,Diğer uygulama mantığı / UI,Kısmi: Android UnifiedDiff yerel satır farkı sağlar (40.000 karakter/350 satır sınırı); özgün tüm diff formatları ve dosya-uygulama akışı yok
+Sources/CoucouKit/IslandScreenGeometry.swift,1468,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/IslandTypes.swift,11100,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/MochiActivityState.swift,3039,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/MochiMood.swift,13859,Dinamik ada / durum / animasyon,Kısmi: boşta/düşünme/dinleme/başarı/hata özel vektörleri; tüm özgün mood/animasyon motoru ve kıyafet seti değil
+Sources/CoucouKit/MochiOutfitDrawing.swift,59368,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/MochiStill.swift,3461,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/MochiWardrobe.swift,3412,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/PillCatalog.swift,8482,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/PillColors.swift,3208,Dinamik ada / durum / animasyon,Kısmi: Android overlay kapsülü ve özel Mochi/SoundPool var; kaynak durum/animasyon motoru tam değil
+Sources/CoucouKit/QuestionPayload.swift,2464,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/CoucouKit/ServiceDetail.swift,2772,Yardımcı ekran / veri modeli / telefon köprüsü,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/CoucouKit/ServiceSnapshot.swift,2226,Diğer uygulama mantığı / UI,Kısmi: servis ayarı/temel read-only test veya uygulama kısayolu; canlı sağlayıcı adaptörü tamamlanmadı
+Sources/CoucouKit/TurnSnapshot.swift,2772,Diğer uygulama mantığı / UI,Envanterlendi; Android eşleniği tam doğrulanmadı (PORTING_MAP.md)
+Sources/NotificationContent/NotificationViewController.swift,4331,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/AboutView.swift,11285,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/AgentNotifier.swift,10590,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/AppleStyle.swift,8971,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/ApprovalCard.swift,9736,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/CoucouIntents.swift,4002,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/CoucouPhoneApp.swift,7042,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/Decisions.swift,1253,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/DenyApprovalIntent.swift,2009,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/Haptics.swift,479,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/HomeView.swift,22335,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/InstructionComposer.swift,12308,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/IntroView.swift,12765,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/KitPreviewView.swift,3733,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/LastTurnView.swift,13746,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/LinkTestView.swift,6175,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/LiveActivityLink.swift,3549,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/MacStubs.swift,416,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/MochiActivityAttributes.swift,318,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/MochiLive.swift,1449,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/OpenLeadMochiIntent.swift,536,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/PhoneLink.swift,27858,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/QuestionCard.swift,4903,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/SearchAndSpotlight.swift,6128,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/ServiceLiveDetail.swift,8775,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/ServiceStatus.swift,1815,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/ServiceViews.swift,10070,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/SessionDetailView.swift,12178,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/SessionStatus.swift,3074,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/SharedSessions.swift,3350,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/TurnArchive.swift,3008,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Phone/TurnShare.swift,5030,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Widgets/CoucouControl.swift,1822,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Widgets/CoucouWidgets.swift,17656,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Widgets/MochiLiveActivity.swift,9160,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Sources/Widgets/TeamConfiguration.swift,3190,iOS companion / widget / bildirim,Port edilmedi: iOS/widget/notification extension; Android eşleniği sonraki aşama
+Tests/HermesConfigMergerTests.swift,14455,macOS Swift test,Port edilmedi: Android unit/UI test eşleniği henüz yok
