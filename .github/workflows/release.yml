@@ -85,7 +85,7 @@ jobs:
           sha256sum "KairoAI-${GITHUB_REF_NAME}-signed.apk" "KairoAI-${GITHUB_REF_NAME}.aab" > SHA256SUMS.txt
           echo "apk=KairoAI-${GITHUB_REF_NAME}-signed.apk" >> "$GITHUB_OUTPUT"
       - name: Upload release build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: kairo-ai-release-${{ github.ref_name }}
           path: |
