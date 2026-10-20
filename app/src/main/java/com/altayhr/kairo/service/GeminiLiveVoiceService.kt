@@ -4,6 +4,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
+import android.Manifest
+import android.content.pm.PackageManager
 import android.content.Context
 import android.content.Intent
 import android.media.AudioAttributes
@@ -194,6 +196,10 @@ class GeminiLiveVoiceService : Service() {
 
     private fun startCapture() {
         if (captureJob?.isActive == true || !ready.get()) return
+        if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            setState("Mikrofon izni gerekli", "Gemini Live sesli sohbeti için mikrofon izni verilmeli.", false)
+            return
+        }
         captureJob = scope.launch {
             try {
                 val minBuffer = AudioRecord.getMinBufferSize(16000, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT).coerceAtLeast(4096)
