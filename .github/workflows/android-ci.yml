@@ -44,7 +44,7 @@ jobs:
         if: always() && hashFiles('app/build/outputs/apk/debug/*.apk') != ''
         run: cp app/build/outputs/apk/debug/app-debug.apk "KairoAI-debug-${{ github.run_number }}.apk"
       - name: Upload debug APK for diagnostics
-        if: always() && hashFiles('KairoAI-debug-${{ github.run_number }}.apk') != ''
+        if: always()
         uses: actions/upload-artifact@v6
         with:
           name: KairoAI-debug-${{ github.run_number }}
